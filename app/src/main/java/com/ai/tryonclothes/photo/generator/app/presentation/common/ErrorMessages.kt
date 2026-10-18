@@ -12,7 +12,7 @@ fun AppError.toMessage(context: Context): String = when (this) {
     AppError.Offline -> context.getString(R.string.error_offline)
     AppError.Timeout -> context.getString(R.string.error_timeout)
     is AppError.RateLimited -> retryAfterSeconds?.takeIf { it in 1..600 }
-        ?.let { context.getString(R.string.error_rate_limited_seconds, it.toInt()) }
+        ?.let { context.resources.getQuantityString(R.plurals.error_rate_limited_seconds, it.toInt(), it.toInt()) }
         ?: context.getString(R.string.error_rate_limited)
     is AppError.Server -> context.getString(R.string.error_server)
     is AppError.Rejected -> detail?.let { context.getString(R.string.error_rejected, it) } ?: context.getString(R.string.error_rejected_plain)
