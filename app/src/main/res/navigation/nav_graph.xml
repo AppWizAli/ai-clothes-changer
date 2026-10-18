@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ai.tryonclothes.photo.generator.app.presentation.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/looksFragment"
+        android:name="com.ai.tryonclothes.photo.generator.app.presentation.looks.LooksFragment"
+        tools:layout="@layout/fragment_looks" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.ai.tryonclothes.photo.generator.app.presentation.settings.SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.ai.tryonclothes.photo.generator.app.presentation.photo.PhotoFragment"
+        tools:layout="@layout/fragment_photo" />
+    <fragment
+        android:id="@+id/garmentFragment"
+        android:name="com.ai.tryonclothes.photo.generator.app.presentation.garment.GarmentFragment"
+        tools:layout="@layout/fragment_garment" />
+    <fragment
+        android:id="@+id/generationFragment"
+        android:name="com.ai.tryonclothes.photo.generator.app.presentation.generation.GenerationFragment"
+        tools:layout="@layout/fragment_generation">
+        <argument android:name="jobId" app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.ai.tryonclothes.photo.generator.app.presentation.result.ResultFragment"
+        tools:layout="@layout/fragment_result">
+        <argument android:name="jobId" android:defaultValue="" app:argType="string" />
+        <argument android:name="lookId" android:defaultValue="" app:argType="string" />
+    </fragment>
+</navigation>

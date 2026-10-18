@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Camera captures (written by the camera app). -->
+    <cache-path name="captures" path="capture/" />
+    <!-- Saved looks and unsaved results, for sharing. -->
+    <files-path name="looks" path="looks/" />
+    <files-path name="results" path="results/" />
+</paths>

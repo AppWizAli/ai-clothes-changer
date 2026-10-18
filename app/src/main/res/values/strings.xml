@@ -1,3 +1,119 @@
 <resources>
-    <string name="app_name">Ai Clothes Changer</string>
+    <string name="app_name">AI Clothes Changer</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_looks">My Looks</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Home -->
+    <string name="home_title">Virtual Try-On\nin Secs</string>
+    <string name="home_subtitle">Pick a photo, pick an outfit, see the result. No ads in your way.</string>
+    <string name="home_start">Start Try-On</string>
+    <string name="home_recent">Recent looks</string>
+    <string name="home_recent_empty">Looks you save will appear here.</string>
+    <string name="home_continue_running">Your look is being generated</string>
+    <string name="home_continue_ready">Your result is ready</string>
+    <string name="home_continue_failed">The last generation didn\'t finish</string>
+    <string name="home_continue_action">Open</string>
+    <string name="home_not_configured">Generation isn\'t set up in this build yet. You can still prepare your photos.</string>
+
+    <!-- Photo step -->
+    <string name="photo_title">Your photo</string>
+    <string name="photo_hint">Use a clear, front-facing photo with your full outfit visible.</string>
+    <string name="photo_empty">No photo yet</string>
+    <string name="pick_gallery">Gallery</string>
+    <string name="pick_camera">Camera</string>
+    <string name="next">Next</string>
+    <string name="step_one_of_two">Step 1 of 2</string>
+    <string name="step_two_of_two">Step 2 of 2</string>
+    <string name="checking_image">Checking image…</string>
+
+    <!-- Garment step -->
+    <string name="garment_title">Choose an outfit</string>
+    <string name="garment_hint">Import a photo of a garment. Plain product shots on a clean background work best.</string>
+    <string name="garment_empty">No outfit yet</string>
+    <string name="garment_import">Import outfit</string>
+    <string name="garment_replace">Replace outfit</string>
+    <string name="generate">Generate</string>
+    <string name="category_tops">Tops</string>
+    <string name="category_bottoms">Pants</string>
+    <string name="category_dresses">Dresses</string>
+    <string name="category_outerwear">Outerwear</string>
+    <string name="category_full_outfit">Full outfit</string>
+
+    <!-- Generation -->
+    <string name="generation_title">Creating your look</string>
+    <string name="generation_queued">Getting ready…</string>
+    <string name="generation_uploading">Uploading your photos securely…</string>
+    <string name="generation_generating">Generating your look…</string>
+    <string name="generation_progress">%1$d%%</string>
+    <string name="generation_leave_hint">You can leave this screen. We\'ll keep working and it will be here when you return.</string>
+    <string name="cancel">Cancel</string>
+    <string name="retry">Try again</string>
+    <string name="back_to_outfit">Change outfit</string>
+    <string name="generation_cancelled">Generation cancelled</string>
+
+    <!-- Result -->
+    <string name="result_title">Your look</string>
+    <string name="label_original">ORIGINAL</string>
+    <string name="label_result">AI RESULT</string>
+    <string name="save_look">Save look</string>
+    <string name="saved_look">Saved</string>
+    <string name="share">Share</string>
+    <string name="try_another">Try another outfit</string>
+    <string name="delete">Delete</string>
+    <string name="result_saved_message">Saved to My Looks</string>
+    <string name="result_missing">This image is no longer available.</string>
+    <string name="slider_description">Drag to compare the original with the AI result</string>
+
+    <!-- Looks -->
+    <string name="looks_title">My Looks</string>
+    <string name="looks_empty_title">No saved looks yet</string>
+    <string name="looks_empty_body">Generate a try-on and tap Save look to keep it here.</string>
+    <string name="delete_look_title">Delete this look?</string>
+    <string name="delete_look_body">It will be removed from this device. This can\'t be undone.</string>
+    <string name="look_item_description">Saved look</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_storage">Storage on this device</string>
+    <string name="settings_storage_looks">Saved looks: %1$s (%2$d)</string>
+    <string name="settings_storage_cache">Temporary files: %1$s</string>
+    <string name="settings_clear_cache">Clear temporary files</string>
+    <string name="settings_clear_cache_done">Temporary files cleared</string>
+    <string name="settings_delete_all">Delete all saved looks</string>
+    <string name="settings_delete_all_confirm_title">Delete all saved looks?</string>
+    <string name="settings_delete_all_confirm_body">Every saved look will be removed from this device. This can\'t be undone.</string>
+    <string name="settings_delete_all_done">All saved looks deleted</string>
+    <string name="settings_privacy">Privacy</string>
+    <string name="settings_privacy_body">Your photo and the outfit image are uploaded to our try-on service only when you tap Generate, so an AI model can create the result. They are used for that request. Saved looks stay in this app\'s private storage on your device and are never uploaded, backed up to the cloud, or shared unless you choose Share.\n\nThis app contains no advertising and requests no storage, camera or contacts permissions. Photos come from the system photo picker, and the camera app only when you choose Camera.</string>
+    <string name="settings_service">Try-on service</string>
+    <string name="settings_service_ready">Connected: %1$s</string>
+    <string name="settings_service_missing">Not configured in this build. Set the backend URL to enable generation.</string>
+    <string name="settings_about">About</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="confirm">Confirm</string>
+
+    <!-- Errors -->
+    <string name="error_not_configured">Generation isn\'t available in this build because no try-on service is configured.</string>
+    <string name="error_missing_input">Choose a photo and an outfit first.</string>
+    <string name="error_offline">Can\'t reach the service. Check your connection and try again.</string>
+    <string name="error_timeout">The service took too long to respond. Try again.</string>
+    <string name="error_rate_limited">Too many requests right now. Please wait a moment and try again.</string>
+    <string name="error_rate_limited_seconds">Too many requests. Try again in %1$d seconds.</string>
+    <string name="error_server">The service ran into a problem. Try again in a moment.</string>
+    <string name="error_rejected">The service couldn\'t use these images. %1$s</string>
+    <string name="error_rejected_plain">The service couldn\'t use these images.</string>
+    <string name="error_provider_failed">The AI couldn\'t create this look. Try a different photo or outfit.</string>
+    <string name="error_invalid_result">The service returned something that isn\'t a valid image. Try again.</string>
+    <string name="error_storage">Couldn\'t write to this device\'s storage. Free up some space and try again.</string>
+    <string name="error_cancelled">Generation was cancelled.</string>
+    <string name="error_unknown">Something went wrong. Try again.</string>
+    <string name="error_image_unsupported">That file type isn\'t supported. Use a JPEG, PNG or WebP image.</string>
+    <string name="error_image_too_large_file">That image is larger than 15 MB. Choose a smaller one.</string>
+    <string name="error_image_too_small">That image is too small. Use one at least 256 px on its shortest side.</string>
+    <string name="error_image_too_large_dimensions">That image\'s dimensions are too large. Choose a smaller one.</string>
+    <string name="error_image_unreadable">That image couldn\'t be opened. Choose a different one.</string>
+    <string name="camera_unavailable">No camera app is available on this device.</string>
 </resources>

@@ -1,9 +1,112 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.AiClothesChanger" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <!-- The reference app is dark-only; so is this one. -->
+    <style name="Base.Theme.AiClothesChanger" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/cyan</item>
+        <item name="colorOnSecondary">@color/bg</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceContainer">@color/surface</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="materialButtonStyle">@style/Widget.App.Button.Primary</item>
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNav</item>
     </style>
 
     <style name="Theme.AiClothesChanger" parent="Base.Theme.AiClothesChanger" />
+
+    <style name="Widget.App.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/pink</item>
+        <item name="cornerRadius">@dimen/radius_button</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="Widget.App.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="backgroundTint">@color/surface_raised</item>
+        <item name="strokeColor">@color/cyan</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">@dimen/radius_button</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/cyan</item>
+    </style>
+
+    <style name="Widget.App.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/surface</item>
+        <item name="itemIconTint">@color/nav_item</item>
+        <item name="itemTextColor">@color/nav_item</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.App.NavIndicator</item>
+    </style>
+    <style name="Widget.App.NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">#33FF007A</item>
+    </style>
+
+    <style name="TextAppearance.App.Title" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/cyan</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    <style name="TextAppearance.App.Heading" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+    <style name="TextAppearance.App.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+    <style name="TextAppearance.App.Pill" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textColor">@color/cyan</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Frame" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">21.5dp</item>
+    </style>
+    <style name="ShapeAppearance.App.Tile" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="Widget.App.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@android:color/transparent</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStrokeColor">@color/stroke</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipSurfaceColor">@color/surface</item>
+        <item name="chipCornerRadius">22dp</item>
+        <item name="android:checkable">true</item>
+    </style>
+
+    <style name="App.Section" parent="">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+    <style name="App.SectionTitle" parent="TextAppearance.App.Heading">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/cyan</item>
+    </style>
 </resources>
